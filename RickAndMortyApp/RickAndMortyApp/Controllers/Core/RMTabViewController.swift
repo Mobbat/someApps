@@ -12,7 +12,7 @@ final class RMTabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .systemBackground
         setUpTabs()
     }
     
@@ -36,10 +36,14 @@ final class RMTabViewController: UITabBarController {
         let navigationEpisodes = UINavigationController(rootViewController: episodesViewController)
         let navigationSettings = UINavigationController(rootViewController: settingsViewController)
         
-        navigationCharacter.tabBarItem = UITabBarItem(title: "Characters", image: UIImage(systemName: "person.2"), tag: 0)
-        navigationLocation.tabBarItem = UITabBarItem(title: "Location", image: UIImage(systemName: "globe"), tag: 1)
-        navigationEpisodes.tabBarItem = UITabBarItem(title: "Episodes", image: UIImage(systemName: "play.tv"), tag: 2)
-        navigationSettings.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape"), tag: 3)
+        navigationCharacter.tabBarItem = UITabBarItem(title: "Characters",
+                                                      image: UIImage(systemName: "person.2"), tag: 0)
+        navigationLocation.tabBarItem = UITabBarItem(title: "Location",
+                                                     image: UIImage(systemName: "globe"), tag: 1)
+        navigationEpisodes.tabBarItem = UITabBarItem(title: "Episodes",
+                                                     image: UIImage(systemName: "play.tv"), tag: 2)
+        navigationSettings.tabBarItem = UITabBarItem(title: "Settings",
+                                                     image: UIImage(systemName: "gearshape"), tag: 3)
         
         for value in [navigationCharacter,
                       navigationLocation,
